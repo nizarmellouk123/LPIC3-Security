@@ -1,0 +1,23 @@
+Change Any Users Password
+
+Login as the root user and type the command:
+
+# passwd userName
+# passwd vivek
+# passwd tom
+
+Sample outputs:
+
+Enter new LINUX password:
+Retype new LINUX password:
+passwd: password updated successfully
+Change Your Own Password
+Simply type the passwd command:
+
+
+$ passwd
+Sample outputs:
+(current) LINUX password:
+Enter new LINUX password:
+Retype new LINUX password:
+passwd: password updated successfully
