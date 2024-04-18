@@ -1,0 +1,31 @@
+1- Configuring sudo Access
+
+# useradd USERNAME
+
+2- Run the visudo to edit the /etc/sudoers file
+
+## Allows people in group wheel to run all commands
+# %wheel ALL=(ALL) ALL
+
+3- Add the user you created to the wheel group using the usermod command
+
+# usermod -aG wheel USERNAME
+
+4- Use the groups to verify that the user is in the wheel group.
+
+# $ groups   
+#USERNAME whee
+
+5- Use the sudo command to run the whoami command
+
+5. $ sudo whoami
+6. We trust you have received the usual lecture from the local
+System
+7. Administrator. It usually boils down to these three things:
+8.
+9. #1) Respect the privacy of others.
+10. #2) Think before you type.
+11. #3) With great power comes great responsibility.
+12.
+13. [sudo] password for USERNAME:
+root
