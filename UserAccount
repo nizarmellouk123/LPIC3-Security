@@ -1,63 +1,63 @@
 1. How to Add a New User in Linux
 
-[root@localhost ~]# useradd solider
+### [root@localhost ~]# useradd solider
 
 2. Create a User with Different Home Directory
 
-[root@localhost ~]# useradd -d /home/newusers solider
+### [root@localhost ~]# useradd -d /home/newusers solider
 
 3. Create a User with Specific User ID
 
-[root@localhost ~]# useradd -u 999 navin
+### [root@localhost ~]# useradd -u 999 navin
 
 4. Create a User with Specific Group ID
 
-[root@localhost ~]# useradd -u 1000 -g 500 tarunika
+### [root@localhost ~]# useradd -u 1000 -g 500 tarunika
 
 5- Now, see the assigned user id and group id in ‘/etc/passwd‘ file.
 
-[root@localhost ~]# cat /etc/passwd | grep tarunika
-tarunika:x:1000:500::/home/tarunika:/bin/bash
+### [root@localhost ~]# cat /etc/passwd | grep tarunika
+    tarunika:x:1000:500::/home/tarunika:/bin/bash
 
 6. Add a User without Home Directory
 
-[root@localhost ~]# useradd -M shilpi
+### [root@localhost ~]# useradd -M shilpi
 
 7. Create a User with Account Expiry Date
 
-[root@localhost ~]# useradd -e 2014-03-27 aparna
+### [root@localhost ~]# useradd -e 2014-03-27 aparna
 
 8. Create a User with Password Expiry Date
 
-[root@localhost ~]# useradd -e 2014-04-27 -f 45 solider
+### [root@localhost ~]# useradd -e 2014-04-27 -f 45 solider
 
 9. Add a User with Custom Comments
 
-[root@localhost ~]# useradd -c "Manis Khurana" mansi
+### [root@localhost ~]# useradd -c "Manis Khurana" mansi
 
 10. Change User Login Shell:
 
-[root@localhost ~]# useradd -s /sbin/nologin solider
+### [root@localhost ~]# useradd -s /sbin/nologin solider
 
 11. Add a User with Specific Home Directory, Default Shell and Custom Comment
 
-[root@localhost ~]# useradd -m -d /var/www/ravi -s /bin/bash -c "Solider Owner" -U ravi
+### [root@localhost ~]# useradd -m -d /var/www/ravi -s /bin/bash -c "Solider Owner" -U ravi
 
 12. Add a User with Home Directory, Custom Shell, Custom Comment and UID/GID
 
-[root@localhost ~]# useradd -m -d /var/www/tarunika -s /bin/zsh -c "Solider Technical Writer" -u 1000 -g
-1000 tarunika
+### [root@localhost ~]# useradd -m -d /var/www/tarunika -s /bin/zsh -c "Solider Technical Writer" -u 1000 -g
+    1000 tarunika
 
 13. Add a User with Home Directory, No Shell, Custom Comment and User ID
 
-[root@localhost ~]# useradd -m -d /var/www/avishek -s /usr/sbin/nologin -c "Solider Sr. Technical Writer"
--u 1019 avishek
+### [root@localhost ~]# useradd -m -d /var/www/avishek -s /usr/sbin/nologin -c "Solider Sr. Technical Writer"
+    -u 1019 avishek
 
 14. Add a User with Home Directory, Shell, Custom Skell/Comment and User ID
 
-[root@localhost ~]# useradd -m -d /var/www/navin -k /etc/custom.skell -s /bin/tcsh -c "No Active Member
-of Solider" -u 1027 navin
+### [root@localhost ~]# useradd -m -d /var/www/navin -k /etc/custom.skell -s /bin/tcsh -c "No Active Member
+    of Solider" -u 1027 navin
 
 15. Add a User without Home Directory, No Shell, No Group and Custom Comment
 
-[root@localhost ~]# useradd -M -N -r -s /bin/false -c "Disabled Solider Member" clayton
+### [root@localhost ~]# useradd -M -N -r -s /bin/false -c "Disabled Solider Member" clayton
